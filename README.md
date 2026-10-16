@@ -26,6 +26,26 @@ This scene uses a third-person camera and character controller with smooth turni
 - Jump: `Space`
 - Look around: mouse movement
 
+## How to clone only the build folder
+
+If you want to keep just the runnable build without the full Unity project, you can clone only the `Builds` folder from GitHub using a sparse checkout.
+
+1. Open a terminal in an empty folder.
+2. Run:
+
+```bash
+git init
+ git remote add origin https://github.com/yesap4/First-Player-Movement.git
+ git sparse-checkout init --cone
+ git sparse-checkout set Builds
+ git pull origin main
+```
+
+3. After the command finishes, the `Builds` folder will be available locally.
+4. Open the executable inside the build folder to play the game.
+
+For example, the packaged Windows build is available under `Builds/FPP/v1.0.0/`.
+
 ## Run the project
 
 1. Open the project in Unity.
